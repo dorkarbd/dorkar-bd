@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DORKAR BD — প্রতিদিনের প্রয়োজন, এক জায়গায়</title>
+  <meta name="description" content="DORKAR BD — চাকরি, শিক্ষা, CV Maker এবং দরকারি Tools এক জায়গায়।">
+  <style>
+    :root{--primary:#155eef;--dark:#10233f;--green:#16a36a;--bg:#f6f8fc;--card:#fff;--text:#172033;--muted:#667085;--border:#e6eaf0}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif;background:var(--bg);color:var(--text)}
+    a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#ffffffee;backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+    nav{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:23px;font-weight:900;color:var(--primary);letter-spacing:.5px}.logo span{color:var(--green)}
+    .links{display:flex;gap:22px;font-weight:700;font-size:14px}.links a:hover{color:var(--primary)}
+    .menu{display:none;border:0;background:transparent;font-size:25px}
+    .hero{padding:75px 0 45px;background:linear-gradient(135deg,#eaf2ff,#f5fffb)}.hero h1{font-size:clamp(36px,6vw,62px);line-height:1.08;margin:0 0 16px;color:var(--dark)}.hero p{font-size:18px;color:var(--muted);max-width:650px}
+    .search{margin-top:28px;display:flex;background:white;padding:7px;border:1px solid var(--border);border-radius:16px;max-width:720px;box-shadow:0 12px 35px #10233f12}.search input{flex:1;border:0;outline:0;padding:15px;font-size:16px}.btn{border:0;background:var(--primary);color:#fff;padding:13px 19px;border-radius:11px;font-weight:800;cursor:pointer}.btn.green{background:var(--green)}
+    section{padding:55px 0}.section-title{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}.section-title h2{margin:0;font-size:29px}.section-title p{margin:0;color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.card{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:23px;box-shadow:0 7px 22px #10233f08}.card:hover{transform:translateY(-2px);transition:.2s;box-shadow:0 12px 30px #10233f12}.icon{font-size:31px}.card h3{margin:12px 0 7px}.card p{color:var(--muted);font-size:14px;line-height:1.6}.job{display:flex;justify-content:space-between;gap:15px;align-items:center}.badge{display:inline-block;background:#eaf2ff;color:var(--primary);padding:5px 9px;border-radius:20px;font-size:12px;font-weight:800}
+    .tools{grid-template-columns:repeat(4,1fr)}.tool{padding:18px}.tool h3{font-size:16px}
+    .cta{background:var(--dark);color:#fff;border-radius:24px;padding:38px}.cta p{color:#c9d4e5}
+    footer{padding:30px 0;background:#fff;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+    .modal{display:none;position:fixed;inset:0;background:#0008;z-index:50;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modal-box{background:white;border-radius:20px;padding:25px;max-width:620px;width:100%;max-height:90vh;overflow:auto}.close{float:right;border:0;background:#eee;border-radius:50%;width:34px;height:34px;cursor:pointer}.form input,.form textarea,.form select{width:100%;padding:12px;border:1px solid var(--border);border-radius:10px;margin:6px 0 14px;font:inherit}.form label{font-weight:700;font-size:14px}
+    @media(max-width:800px){.links{display:none}.menu{display:block}.grid{grid-template-columns:1fr 1fr}.tools{grid-template-columns:1fr 1fr}.hero{padding-top:55px}}
+    @media(max-width:520px){.grid,.tools{grid-template-columns:1fr}.search{display:block;background:transparent;border:0;box-shadow:none;padding:0}.search input{width:100%;border:1px solid var(--border);border-radius:12px;margin-bottom:9px}.search .btn{width:100%}.hero h1{font-size:40px}.job{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<header><div class="container"><nav>
+  <a class="logo" href="#">DORKAR <span>BD</span></a>
+  <div class="links"><a href="#jobs">চাকরি</a><a href="#education">শিক্ষা</a><a href="#tools">Tools</a><a href="#cv">CV Maker</a><a href="#ai">AI Helper</a></div>
+  <button class="menu" onclick="alert('Mobile menu: Jobs • Education • Tools • CV Maker • AI Helper')">☰</button>
+</nav></div></header>
+
+<main>
+<section class="hero"><div class="container">
+  <h1>প্রতিদিনের প্রয়োজন,<br><span style="color:var(--primary)">এক জায়গায়।</span></h1>
+  <p>চাকরি খুঁজুন, CV বানান, প্রয়োজনীয় Calculator ব্যবহার করুন এবং শিক্ষার দরকারি তথ্য এক জায়গা থেকে পান।</p>
+  <div class="search"><input id="globalSearch" placeholder="যেমন: HSC চাকরি, GPA Calculator, CV Maker"><button class="btn" onclick="searchSite()">🔎 Search</button></div>
+</div></section>
+
+<section><div class="container">
+  <div class="section-title"><div><h2>⭐ জনপ্রিয় সেবা</h2><p>যে কাজগুলো সবচেয়ে বেশি দরকার হতে পারে</p></div></div>
+  <div class="grid">
+    <a class="card" href="#jobs"><div class="icon">💼</div><h3>চাকরি</h3><p>সরকারি ও বেসরকারি চাকরির তথ্য খুঁজুন।</p></a>
+    <a class="card" href="#cv"><div class="icon">📄</div><h3>CV Maker</h3><p>তথ্য দিয়ে সুন্দর একটি CV তৈরি করুন।</p></a>
+    <a class="card" href="#tools"><div class="icon">🧮</div><h3>Useful Tools</h3><p>Age, GPA, Percentage ও অন্যান্য Calculator।</p></a>
+    <a class="card" href="#application"><div class="icon">✍️</div><h3>আবেদন Generator</h3><p>দরকারি আবেদনপত্র দ্রুত তৈরি করুন।</p></a>
+    <a class="card" href="#education"><div class="icon">📚</div><h3>শিক্ষা</h3><p>SSC, HSC, ভর্তি ও scholarship-এর তথ্য।</p></a>
+    <a class="card" href="#ai"><div class="icon">🤖</div><h3>AI Helper</h3><p>লেখা, CV ও application তৈরিতে সাহায্য।</p></a>
+  </div>
+</div></section>
+
+<section id="jobs"><div class="container">
+  <div class="section-title"><div><h2>💼 Latest Jobs</h2><p>ডেমো চাকরির তালিকা—লাইভ circular নয়</p></div><button class="btn" onclick="alert('Job search/filter backend পরের ধাপে যোগ করা হবে।')">সব চাকরি</button></div>
+  <div class="grid">
+    <div class="card job"><div><span class="badge">Government</span><h3>Demo Government Job</h3><p>যোগ্যতা: HSC/সমমান • বাংলাদেশ</p></div><button class="btn" onclick="showJob('Demo Government Job')">Details</button></div>
+    <div class="card job"><div><span class="badge">Private</span><h3>Demo Private Job</h3><p>যোগ্যতা: HSC/Graduate • বাংলাদেশ</p></div><button class="btn" onclick="showJob('Demo Private Job')">Details</button></div>
+    <div class="card job"><div><span class="badge">Entry Level</span><h3>Demo Office Assistant</h3><p>কম্পিউটার দক্ষতা • Full Time</p></div><button class="btn" onclick="showJob('Demo Office Assistant')">Details</button></div>
+  </div>
+</div></section>
+
+<section id="tools"><div class="container">
+  <div class="section-title"><div><h2>🧮 Useful Tools</h2><p>কিছু tool এখনই কাজ করবে</p></div></div>
+  <div class="grid tools">
+    <div class="card tool"><div class="icon">🎂</div><h3>Age Calculator</h3><button class="btn" onclick="ageCalc()">Calculate</button></div>
+    <div class="card tool"><div class="icon">📊</div><h3>Percentage</h3><button class="btn" onclick="percentage()">Calculate</button></div>
+    <div class="card tool"><div class="icon">🎓</div><h3>GPA</h3><button class="btn" onclick="alert('GPA Calculator: পরের ভার্সনে subject-wise grade input যোগ হবে।')">Open</button></div>
+    <div class="card tool"><div class="icon">💸</div><h3>Discount</h3><button class="btn" onclick="discount()">Calculate</button></div>
+  </div>
+</div></section>
+
+<section id="cv"><div class="container"><div class="cta">
+  <h2>📄 CV Maker</h2><p>তোমার নাম, শিক্ষা, skills ও contact information দিয়ে একটি basic CV preview তৈরি করো।</p>
+  <button class="btn green" onclick="openCV()">Create My CV</button>
+</div></div></section>
+
+<section id="application"><div class="container"><div class="section-title"><div><h2>✍️ Application Generator</h2><p>একটি basic আবেদন draft তৈরি করুন</p></div></div>
+  <div class="card form"><label>আবেদনের ধরন</label><select id="appType"><option>ছুটির আবেদন</option><option>চাকরির আবেদন</option><option>প্রত্যয়নপত্রের আবেদন</option><option>আর্থিক সাহায্যের আবেদন</option></select>
+  <label>নাম</label><input id="appName" placeholder="আপনার নাম"><label>প্রতিষ্ঠান/প্রাপক</label><input id="appOrg" placeholder="যেমন: প্রধান শিক্ষক"><button class="btn" onclick="generateApp()">আবেদন তৈরি করুন</button>
+  <textarea id="appOutput" rows="9" placeholder="এখানে আবেদন তৈরি হবে..." style="margin-top:14px"></textarea></div>
+</div></section>
+
+<section id="education"><div class="container"><div class="section-title"><div><h2>📚 Education</h2><p>শিক্ষার্থীদের জন্য দরকারি বিভাগ</p></div></div>
+  <div class="grid"><div class="card"><div class="icon">🎓</div><h3>SSC</h3><p>Exam, result, routine ও notice।</p></div><div class="card"><div class="icon">📘</div><h3>HSC</h3><p>Exam, result, routine ও notice।</p></div><div class="card"><div class="icon">🏫</div><h3>Admission</h3><p>College, university ও অন্যান্য admission তথ্য।</p></div></div>
+</div></section>
+
+<section id="ai"><div class="container"><div class="cta"><h2>🤖 DORKAR AI</h2><p>AI-powered writing assistant—CV, application, English correction ইত্যাদির জন্য।</p><button class="btn green" onclick="alert('AI API সংযোগ পরের ধাপে যোগ করা হবে।')">Try AI</button></div></div></section>
+</main>
+
+<footer><div class="container">© 2026 DORKAR BD • প্রতিদিনের প্রয়োজন, এক জায়গায়।<br><small>এই প্রথম version-এর job data demo। বাস্তব circular publish করার আগে official source যাচাই করতে হবে।</small></div></footer>
+
+<div class="modal" id="cvModal"><div class="modal-box form"><button class="close" onclick="closeCV()">×</button><h2>📄 Basic CV Maker</h2>
+<label>নাম</label><input id="cvName" placeholder="আপনার নাম"><label>Phone</label><input id="cvPhone" placeholder="01XXXXXXXXX"><label>Email</label><input id="cvEmail" placeholder="you@example.com"><label>Education</label><input id="cvEdu" placeholder="SSC / HSC / অন্যান্য"><label>Skills</label><input id="cvSkills" placeholder="Computer, MS Word, etc."><button class="btn" onclick="makeCV()">Preview CV</button><div id="cvPreview" style="margin-top:20px"></div></div></div>
+
+<script>
+function ageCalc(){const d=prompt("জন্মতারিখ দিন (YYYY-MM-DD):"); if(!d)return; const birth=new Date(d), now=new Date(); if(isNaN(birth))return alert("সঠিক তারিখ দিন।"); let age=now.getFullYear()-birth.getFullYear(); const m=now.getMonth()-birth.getMonth(); if(m<0||(m===0&&now.getDate()<birth.getDate()))age--; alert("আপনার বয়স প্রায় "+age+" বছর।");}
+function percentage(){const a=parseFloat(prompt("প্রাপ্ত নম্বর:"));const b=parseFloat(prompt("মোট নম্বর:"));if(isNaN(a)||isNaN(b)||b===0)return alert("সঠিক সংখ্যা দিন।");alert("Percentage = "+((a/b)*100).toFixed(2)+"%");}
+function discount(){const p=parseFloat(prompt("মূল দাম:"));const d=parseFloat(prompt("Discount %:"));if(isNaN(p)||isNaN(d))return alert("সঠিক সংখ্যা দিন।");alert("Discounted price = "+(p-(p*d/100)).toFixed(2));}
+function showJob(t){alert(t+"\\n\\nএটি প্রথম version-এর demo job। বাস্তব তথ্য যোগ করার জন্য Admin panel/database প্রয়োজন।");}
+function openCV(){document.getElementById("cvModal").classList.add("show")}
+function closeCV(){document.getElementById("cvModal").classList.remove("show")}
+function makeCV(){const n=cvName.value||"Your Name",p=cvPhone.value||"",e=cvEmail.value||"",edu=cvEdu.value||"",s=cvSkills.value||"";cvPreview.innerHTML=`<div class="card"><h2>${escapeHtml(n)}</h2><p>📞 ${escapeHtml(p)}<br>✉️ ${escapeHtml(e)}</p><hr><h3>Education</h3><p>${escapeHtml(edu)}</p><h3>Skills</h3><p>${escapeHtml(s)}</p></div>`}
+function generateApp(){const type=appType.value,n=appName.value||"আপনার নাম",o=appOrg.value||"সংশ্লিষ্ট কর্তৃপক্ষ";appOutput.value=`বরাবর\\n${o}\\n\\nবিষয়: ${type}।\\n\\nজনাব/জনাবা,\\nবিনীত নিবেদন এই যে, আমি ${n}। প্রয়োজনীয় কারণে আপনার নিকট এই আবেদনটি পেশ করছি। অনুগ্রহ করে বিষয়টি বিবেচনা করে প্রয়োজনীয় ব্যবস্থা গ্রহণ করার জন্য অনুরোধ করছি।\\n\\nবিনীত\\n${n}`;}
+function searchSite(){const q=document.getElementById("globalSearch").value.toLowerCase();if(!q)return alert("কিছু লিখে Search করুন।");if(q.includes("job")||q.includes("চাকরি"))location.hash="jobs";else if(q.includes("cv"))location.hash="cv";else if(q.includes("gpa")||q.includes("calculator")||q.includes("হিসাব"))location.hash="tools";else if(q.includes("education")||q.includes("শিক্ষা"))location.hash="education";else alert("এই প্রথম version-এ ফল পাওয়া যায়নি। পরের version-এ global search যোগ করা হবে।")}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[m]))}
+</script>
+</body>
+</html>
